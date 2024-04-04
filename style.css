@@ -1,0 +1,40 @@
+body {margin: 25px;
+      background-color: #EAEDED
+      
+   }
+
+
+h1 {color: #2980B9;
+  font-family: luminari, fantasy;
+  font-size: 40px;
+  text-align: center;
+ }
+
+p {color: #424949;
+font-size: 20px;
+text-align: center;
+
+}
+
+label {
+  color: #154360;
+  float: left;
+  width: 8em;
+  text-alight: right;
+  font-weight: bold;
+}
+
+input {
+  width: 10em;
+  margin-left: 1em;
+  margin-bottom: .5em;
+input: focus {
+  border: 2px solid navy;}
+}
+
+script {border: 2px #154360; 
+        border-width: 2px;
+       }
+
+#noborder {border-style: none;
+        }
