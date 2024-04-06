@@ -1,5 +1,3 @@
-
-
 function createMadLib() {
   console.log("createMadLib() called");
   var adjective1 = document.getElementById("adjective1").value;
@@ -64,11 +62,11 @@ function createMadLib() {
     adverb: adverb,
     occupation: occupation,
     plural_noun3: plural_noun3,
-};
-console.log("storyData:" + storyData);
+  };
+  console.log("storyData:" + storyData);
 
-var storyJSON = JSON.stringify(storyData);
-console.log("storyJSON:" + storyJSON);
-return storyJSON;
+  var storyJSON = JSON.stringify(storyData);
+  console.log("storyJSON:" + storyJSON);
+  return storyJSON;
 
 }

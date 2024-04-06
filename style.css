@@ -14,26 +14,22 @@ font-size: 20px;
 text-align: center;
 }
 
-label {
-  color: #154360;
-  float: left;
-  width: 8em;
-  text-alight: right;
-  font-weight: bold;
-}
-
 input {
   width: 10em;
   margin-left: 1em;
   margin-bottom: .5em;
-  input: focus;
   padding: 2px;
   border: 2px solid #2980B9;
+  text-align: center;
 }
 
 #noborder {border-style: none;
  }
 
 #story {
-  font-size :20px;
+  font-size: 20px;
+  border: 3xp dot-dash #2980B9;
+  width: 250px;
+  float: right;
+  
  }
