@@ -1,14 +1,14 @@
 
 
-function createMadLib2() {
-  console.log("createMadLib2() called");
+function createMadLib() {
+  console.log("createMadLib() called");
   var adjective1 = document.getElementById("adjective1").value;
   var adjective2 = document.getElementById("adjective2").value;
   var plural_noun1 = document.getElementById("plural_noun1").value;
   var plural_noun2 = document.getElementById("plural_noun2").value;
   var noun1 = document.getElementById("noun1").value;
   var adjective3 = document.getElementById("adjective3").value;
-  var adjective4 = document.getElemenById("adjective4").value;
+  var adjective4 = document.getElementById("adjective4").value;
   var noun2 = document.getElementById("noun2").value;
   var adjective5 = document.getElementById("adjective5").value;
   var place = document.getElementById("place").value;
@@ -47,7 +47,7 @@ function createMadLib2() {
     plural_noun3 + 
     "</u> make it all worthwhile!";
 
-  var story = document.getElementById("story").inner HTML;
+  var story = document.getElementById("story").innerHTML;
   console.log("story:" + story);
 
   var storyData = {
