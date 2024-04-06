@@ -17,4 +17,26 @@ function printMadLib() {
 
   document.getElementById("output").innerHTML = "There are a lot of " + adjective1 + " things about being a teacher. First of all, you get to teach " + adjective2 + " subjects like math, science, and " + plural_noun1 + " -- and who wouldn't want to talk about " + plural_noun1 + " all day?! Second, you have the same schedule as your " + plural_noun2 + " which means you get holidays like " + noun1 + " Day off from work.  And let's not forget about the entire " + adjective3 + " summer! Third, never underestimate how " + adjective4 + " it is to have the teacher's answer " + noun2 + ". That " + adjective5 + " book holds all the answer in (the) " + place + "! But the most " + adverb + " best thing about being a/ an " + occupation + " is the amazing students. Those " + plural_noun3 + " make it all worthwhile!";
 
+var story = document.getElementById("story").inner HTML; console.log("story:" + story);
+
+var StoryData = {
+  timestamp: Date.now(),
+  adjective1: adjective1,
+  adjective2: adjective2,
+  plural_noun1: plural_noun1,
+  plural_noun2: plural_noun2,
+  noun1: noun1,
+  adjective3: adjective3,
+  adjective4: adjective4,
+  adjective5: adjective5,
+  place: place,
+  adverb: adverb,
+  occupation: occupation,
+  plural_noun3: plural_noun3,
+};
+
+var storyJSON = JSON.stringify(storyData);
+console.log("storyJSON:" + storyJSON);
+return storyJSON;
+
 }
