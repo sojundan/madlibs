@@ -17,35 +17,35 @@ function createMadLib2() {
   var plural_noun3 = document.getElementById("plural_noun3").value;
 
   document.getElementById("story").innerHTML = 
-      "There are a lot of <u>" +
-      adjective1 + 
-      "</u> things about being a teacher. First of all, you get to teach <u>" +
-      adjective2 + 
-      "</u> subjects like math, science, and <u>" +
-      plural_noun1 +
-      "</u> -- and who wouldn't want to talk about <u> " +
-      plural_noun1 + 
-      "</u> all day?! Second, you have the same schedule as your <u> " +
-      plural_noun2 + 
-      "</u> which means you get holidays like <u>" +
-      noun1 + 
-      "</u> Day off from work.  And let's not forget about the entire <u> " +
-      adjective3 + 
-      " </u> summer! Third, never underestimate how <u>" +
+    "There are a lot of <u>" +
+    adjective1 + 
+    "</u> things about being a teacher. First of all, you get to teach <u>" +
+    adjective2 + 
+    "</u> subjects like math, science, and <u>" +
+    plural_noun1 +
+    "</u> -- and who wouldn't want to talk about <u> " +
+    plural_noun1 + 
+    "</u> all day?! Second, you have the same schedule as your <u> " +
+    plural_noun2 + 
+    "</u> which means you get holidays like <u>" +
+     noun1 + 
+    "</u> Day off from work.  And let's not forget about the entire <u> " +
+    adjective3 + 
+    " </u> summer! Third, never underestimate how <u>" +
       adjective4 +
-      " <u/>it is to have the teacher's answer <u>" +
-      noun2 + 
-      "</u>. That <u>" +
-      adjective5 + 
-      "</u> book holds all the answer in (the) <u>" +
-      place + 
-      "</u>! But the most <u>" +
-      adverb + 
-      "</u> best thing about being a/ an <u>" +
-      occupation + 
-      "</u> is the amazing students. Those <u>" +
-      plural_noun3 + 
-      "</u> make it all worthwhile!";
+    " <u/>it is to have the teacher's answer <u>" +
+    noun2 + 
+    "</u>. That <u>" +
+    adjective5 + 
+    "</u> book holds all the answer in (the) <u>" +
+    place + 
+    "</u>! But the most <u>" +
+    adverb + 
+    "</u> best thing about being a/ an <u>" +
+    occupation + 
+    "</u> is the amazing students. Those <u>" +
+    plural_noun3 + 
+    "</u> make it all worthwhile!";
 
   var story = document.getElementById("story").inner HTML;
   console.log("story:" + story);
