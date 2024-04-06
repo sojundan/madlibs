@@ -28,8 +28,8 @@ input {
 
 #story {
   font-size: 20px;
-  border: 3xp dot-dash #2980B9;
-  width: 250px;
-  float: right;
-  
+  border: 4px double #2980B9;
+  margin: 5px;
+  padding: 5px;
+  text-align: left;
  }

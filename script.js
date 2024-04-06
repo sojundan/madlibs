@@ -11,39 +11,16 @@ function createMadLib() {
   var adjective5 = document.getElementById("adjective5").value;
   var place = document.getElementById("place").value;
   var adverb = document.getElementById("adverb").value;
-  var ocupation = document.getElementById("ocupation").value;
+  var occupation = document.getElementById("occupation").value;
   var plural_noun3 = document.getElementById("plural_noun3").value;
 
   document.getElementById("story").innerHTML = 
-    "There are a lot of <u>" +
-    adjective1 + 
-    "</u> things about being a teacher. First of all, you get to teach <u>" +
-    adjective2 + 
-    "</u> subjects like math, science, and <u>" +
-    plural_noun1 +
-    "</u> -- and who wouldn't want to talk about <u> " +
-    plural_noun1 + 
-    "</u> all day?! Second, you have the same schedule as your <u> " +
-    plural_noun2 + 
-    "</u> which means you get holidays like <u>" +
-     noun1 + 
-    "</u> Day off from work.  And let's not forget about the entire <u> " +
-    adjective3 + 
-    " </u> summer! Third, never underestimate how <u>" +
-      adjective4 +
-    " <u/>it is to have the teacher's answer <u>" +
-    noun2 + 
-    "</u>. That <u>" +
-    adjective5 + 
-    "</u> book holds all the answer in (the) <u>" +
-    place + 
-    "</u>! But the most <u>" +
-    adverb + 
-    "</u> best thing about being a/ an <u>" +
-    occupation + 
-    "</u> is the amazing students. Those <u>" +
-    plural_noun3 + 
-    "</u> make it all worthwhile!";
+    "There are a lot of " + adjective1 + " things about being a teacher. First of all, you get to teach " + adjective2 + " subjects like math, science, and " + plural_noun1 + " -- and who wouldn't want to talk about  " + plural_noun1 + " all day?! Second, you have the same schedule as your " + plural_noun2 + 
+    " which means you get holidays like " + noun1 + 
+    " Day off from work.  And let's not forget about the entire  " +
+    adjective3 + "  summer! Third, never underestimate how " +
+      adjective4 + " it is to have the teacher's answer " +
+    noun2 + ". That " + adjective5 + " book holds all the answer in (the) " + place + "! But the most " + adverb + " best thing about being a/ an " + occupation + " is the amazing students. Those " + plural_noun3 + " make it all worthwhile!";
 
   var story = document.getElementById("story").innerHTML;
   console.log("story:" + story);
