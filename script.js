@@ -11,7 +11,7 @@ function createMadLib() {
   var adjective5 = document.getElementById("adjective5").value;
   var place = document.getElementById("place").value;
   var adverb = document.getElementById("adverb").value;
-  var occupation = document.getElementById("occupation").value;
+  var ocupation = document.getElementById("ocupation").value;
   var plural_noun3 = document.getElementById("plural_noun3").value;
 
   document.getElementById("story").innerHTML = 
