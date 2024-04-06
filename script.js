@@ -1,7 +1,7 @@
 
 
-function createMadLib() {
-  console.log("createMadLib() called");
+function createMadLib2() {
+  console.log("createMadLib2() called");
   var adjective1 = document.getElementById("adjective1").value;
   var adjective2 = document.getElementById("adjective2").value;
   var plural_noun1 = document.getElementById("plural_noun1").value;
@@ -16,7 +16,7 @@ function createMadLib() {
   var occupation = document.getElementById("occupation").value;
   var plural_noun3 = document.getElementById("plural_noun3").value;
 
-    document.getElementById("story").innerHTML = 
+  document.getElementById("story").innerHTML = 
       "There are a lot of <u>" +
       adjective1 + 
       "</u> things about being a teacher. First of all, you get to teach <u>" +
