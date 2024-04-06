@@ -1,7 +1,6 @@
 body {margin: 25px;
       background-color: #EAEDED
-      
-   }
+}
 
 
 h1 {color: #2980B9;
@@ -13,7 +12,6 @@ h1 {color: #2980B9;
 p {color: #424949;
 font-size: 20px;
 text-align: center;
-
 }
 
 label {
@@ -28,13 +26,14 @@ input {
   width: 10em;
   margin-left: 1em;
   margin-bottom: .5em;
-input: focus {
-  border: 2px solid navy;}
+  input: focus;
+  padding: 2px;
+  border: 2px solid #2980B9;
 }
 
-script {border: 2px #154360; 
-        border-width: 2px;
-       }
-
 #noborder {border-style: none;
-        }
+ }
+
+#story {
+  font-size :20px;
+ }

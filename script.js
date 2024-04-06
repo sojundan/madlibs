@@ -64,7 +64,7 @@ function createMadLib() {
     adverb: adverb,
     occupation: occupation,
     plural_noun3: plural_noun3,
-  };
+};
 console.log("storyData:" + storyData);
 
 var storyJSON = JSON.stringify(storyData);
