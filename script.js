@@ -47,7 +47,7 @@ function createMadLib2() {
     plural_noun3 + 
     "</u> make it all worthwhile!";
 
-  var story = document.getElementById("story").inner HTML;
+  var story = document.getElementById("output").inner HTML;
   console.log("story:" + story);
 
   var storyData = {
