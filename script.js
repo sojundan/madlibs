@@ -1,3 +1,15 @@
+const firebaseConfig = {
+        apiKey: "AIzaSyCavEaXIot3N5bMRbnVmZ03iCJptStWzFQ",
+        authDomain: "madlibs-bf9f6.firebaseapp.com",
+        projectId: "madlibs-bf9f6",
+        storageBucket: "madlibs-bf9f6.appspot.com",
+        messagingSenderId: "968925184451",
+        appId: "1:968925184451:web:12805ac6325a7dc4c8bd76",
+      };
+const app = firebase.initializeApp(firebaseConfig);
+const db = getFirestore(app);
+console.log("firebase setup complete!");
+
 function createMadLib() {
   console.log("createMadLib() called");
   var adjective1 = document.getElementById("adjective1").value;
