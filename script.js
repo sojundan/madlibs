@@ -7,7 +7,7 @@ const firebaseConfig = {
         appId: "1:968925184451:web:12805ac6325a7dc4c8bd76",
       };
 const app = firebase.initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const db = firebase.firestore();
 console.log("firebase setup complete!");
 
 function createMadLib() {
@@ -25,6 +25,7 @@ function createMadLib() {
   var adverb = document.getElementById("adverb").value;
   var occupation = document.getElementById("occupation").value;
   var plural_noun3 = document.getElementById("plural_noun3").value;
+  var author = document.getElementById("author").value;
 
   document.getElementById("story").innerHTML = 
     "There are a lot of " + adjective1 + " things about being a teacher. First of all, you get to teach " + adjective2 + " subjects like math, science, and " + plural_noun1 + " -- and who wouldn't want to talk about  " + plural_noun1 + " all day?! Second, you have the same schedule as your " + plural_noun2 + 
@@ -32,7 +33,7 @@ function createMadLib() {
     " Day off from work.  And let's not forget about the entire  " +
     adjective3 + "  summer! Third, never underestimate how " +
       adjective4 + " it is to have the teacher's answer " +
-    noun2 + ". That " + adjective5 + " book holds all the answer in (the) " + place + "! But the most " + adverb + " best thing about being a/ an " + occupation + " is the amazing students. Those " + plural_noun3 + " make it all worthwhile!";
+    noun2 + ". That " + adjective5 + " book holds all the answer in (the) " + place + "! But the most " + adverb + " best thing about being a/ an " + occupation + " is the amazing students. Those " + plural_noun3 + " make it all worthwhile!  Story by " + author;
 
   var story = document.getElementById("story").innerHTML;
   console.log("story:" + story);
@@ -51,11 +52,49 @@ function createMadLib() {
     adverb: adverb,
     occupation: occupation,
     plural_noun3: plural_noun3,
+    author: author
   };
   console.log("storyData:" + storyData);
 
   var storyJSON = JSON.stringify(storyData);
   console.log("storyJSON:" + storyJSON);
-  return storyJSON;
+  return storyData;
 
+}
+
+function saveMadLib() {
+  console.log("saveMadLib() called");
+  var storyData = createMadLib();
+  db.collection("madlibs").doc(storyData.author).set(storyData);
+  alert(storyData.author + " saved to database!");
+  }
+
+function retrieveMadLib() {
+  console.log("retrieveMadLib() called");
+  var author = prompt("Enter the name of the story you want to look up: ");
+  db.collection("madlibs")
+  .doc(author)
+  .get()
+  .then((doc) => {
+    if (doc.exists) {
+      console.log("Document data:", doc.data());
+      var storyData = doc.data();
+      document.getElemenById("story").innerHTML = storyData.story;
+    } else {
+      console.log("No such document!");
+      document.getElementById("story").innerHTML = "No story found with that name!";
+    }
+  })
+  .catch((error) => {
+    console.log("No such document!", error);
+    document.getElementById("story").innerHTML = "No story found with that name!";
+  });
+}
+
+function editMadLib() {
+  console.log("editMadLib() called");
+}
+
+function deletMadLib() {
+  console.log("deletMadLib() called");
 }
