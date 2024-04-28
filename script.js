@@ -103,11 +103,28 @@ function editMadLib() {
         document.getElementById(
           "adjective1").value = storyData.adjective1;
         document.getElementById("adjective2").value = storyData.adjective2;
+        document.getElementById("plural_noun1").value = storyData.plural_noun1;
+        document.getElementById("plural_noun2").value = storyData.plural_noun2;
+        document.getElementById("noun1").value = storyData.noun1;
         document.getElementById("adjective3").value = storyData.adjective3;
         document.getElementById("adjective4").value = storyData.adjective4;
-        document.getElementById()
-      }
+        document.getElementById("adjective5").value = storyData.adjective5;
+        document.getElementById("place").value = storyData.place;
+        document.getElementById("adverb").value = storyData.adverb;
+        document.getElementById("occupation").value = storyData.occupation;
+        document.getElementById("plural_noun3").value = storyData.plural_noun3;
+        document.getElementById("author").value = storyData.author;
+        document.getElementById("story").innerHTML = storyData.story;
+    } else {
+
+        console.log("No such document!");
+        document.getElementById("story").innerHTML = "Story not found!";
     }
+})
+  .catch((error) => {
+    console.log("Error getting document:", error);
+    document.getElementById("story").innerHTML = "Story not found!";
+  });
 }
 
 function deletMadLib() {
