@@ -54,12 +54,10 @@ function createMadLib() {
     plural_noun3: plural_noun3,
     author: author
   };
-  console.log("storyData:" + storyData);
-
+ 
   var storyJSON = JSON.stringify(storyData);
-  console.log("storyJSON:" + storyJSON);
+  console.log("storyJSON: " + storyJSON);
   return storyData;
-
 }
 
 function saveMadLib() {
@@ -71,28 +69,45 @@ function saveMadLib() {
 
 function retrieveMadLib() {
   console.log("retrieveMadLib() called");
-  var author = prompt("Enter the name of the story you want to look up: ");
+  var author = prompt("Enter the name of the story you want to look up:");
   db.collection("madlibs")
-  .doc(author)
-  .get()
-  .then((doc) => {
-    if (doc.exists) {
-      console.log("Document data:", doc.data());
-      var storyData = doc.data();
-      document.getElemenById("story").innerHTML = storyData.story;
-    } else {
-      console.log("No such document!");
-      document.getElementById("story").innerHTML = "No story found with that name!";
-    }
-  })
-  .catch((error) => {
-    console.log("No such document!", error);
-    document.getElementById("story").innerHTML = "No story found with that name!";
-  });
+    .doc(author)
+    .get()
+    .then((doc) => {
+      if (doc.exists) {
+        console.log("Document data:", doc.data());
+        var storyData = doc.data();
+        document.getElementById("story").innerHTML = storyData.story;
+      } else {
+        console.log("No such document!");
+        document.getElementById("story").innerHTML = "Story not found!";
+      }
+    })
+    .catch((error) => {
+      console.log("Error retrieving document:", error);
+      document.getElementById("story").innerHTML = "Story not found!";
+    });
 }
 
 function editMadLib() {
   console.log("editMadLib() called");
+  var author = prompt("Enter the name of the story you want to edit:");
+  db.collection("madlibs")
+    .doc(author)
+    .get()
+    .then((doc) => {
+      if (doc.exists) {
+        console.log("Document data:", doc.data());
+        var storyData = doc.data();
+
+        document.getElementById(
+          "adjective1").value = storyData.adjective1;
+        document.getElementById("adjective2").value = storyData.adjective2;
+        document.getElementById("adjective3").value = storyData.adjective3;
+        document.getElementById("adjective4").value = storyData.adjective4;
+        document.getElementById()
+      }
+    }
 }
 
 function deletMadLib() {
