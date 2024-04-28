@@ -127,6 +127,27 @@ function editMadLib() {
   });
 }
 
-function deletMadLib() {
-  console.log("deletMadLib() called");
+function deleteMadLib() {
+  console.log("deleteMadLib() called");
+
+  var author = prompt("Enter the name of the story you want to delete:");
+  db.collection("madlibs")
+    .doc(author)
+    .get()
+    .then((doc) => {
+      if (doc.exists) {
+        console.log("Document data:", doc.data());
+        var storyData = doc.data();
+        document.getElementById("story").innerHTML = storyData.author + "successfully deleted!";
+        db.collection("madlibs").doc(storyData.author).delete();
+        alert(storyData.author + " deleted from database!");
+      } else {
+        console.log("No such document!");
+        document.getElementById("story").innerHTML = "Story not found!";
+      }
+    })
+    .catch((error) => {
+      console.log("Error getting document:", error);
+      document.getElementById("story").innerHTML = "Story not found!";
+    });
 }
