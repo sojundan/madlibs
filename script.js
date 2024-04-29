@@ -39,6 +39,7 @@ function createMadLib() {
   console.log("story:" + story);
 
   var storyData = {
+    story: story,
     timestamp: Date.now(),
     adjective1: adjective1,
     adjective2: adjective2,
